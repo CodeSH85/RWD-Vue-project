@@ -1,0 +1,106 @@
+// Custom.scss 
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+
+// 2. Include any default variable overrides here
+
+// ======= variables ==========
+
+// colors */
+$main-color-1: rgb(246, 246, 246);
+$main-color-2: rgb(92, 79, 69);
+$dec-color-light:rgb(152, 150, 140);
+$font-main-color: rgb(50, 43, 37);
+$font-dec-color: rgb(219, 116, 26);
+// fonts */
+$main-en-font: 'Baumans', cursive;
+
+// 3. Include remainder of required Bootstrap stylesheets */
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+// @import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_root.scss";
+
+// 4. Include../node_modules/@e any optional Bootstrap CSS as needed */
+@import "../../node_modules/bootstrap/scss/_reboot.scss";
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+@import "../../node_modules/bootstrap/scss/_containers.scss";
+@import "../../node_modules/bootstrap/scss/_buttons.scss";
+@import "../../node_modules/bootstrap/scss/_carousel.scss";
+@import "../../node_modules/bootstrap/scss/_nav.scss";
+@import "../../node_modules/bootstrap/scss/_navbar.scss";
+@import "../../node_modules/bootstrap/scss/_grid.scss";
+@import "../../node_modules/bootstrap/scss/_card.scss";
+@import "../../node_modules/bootstrap/scss/_helpers.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_forms.scss";
+
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss` */
+@import "../../node_modules/bootstrap/scss/utilities/api.scss";
+
+// 6. Add additional custom code here */
+
+body {
+    overflow-x: hidden;
+    font-family: $main-en-font;
+    background-color: $main-color-1;
+}
+
+.navbar {
+    .navbar-brand{
+        color: $font-dec-color;
+    }
+}
+footer {
+    background-color: $main-color-2;
+    position: absolute;
+    bottom: auto;
+}
+.hero-section {
+    margin-bottom: 10rem;
+}
+img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 25rem;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    bottom: 15rem;
+    left: 10rem;
+}
+
+.carousel-control-next-icon {
+    position: absolute;
+    bottom: 15rem;
+    right: 10rem;
+}
+
+.hero-title {
+    h1 {
+        font-size: 5rem;
+        color: $font-main-color;
+    }
+}
+
+.card {
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 20rem;
+    }
+    .btn {
+        background-color: none;
+    }
+    .normal{
+        color: rgb(234, 234, 234);
+    }
+    .picked{
+        color: rgb(255, 0, 0);
+    }
+}
