@@ -2,8 +2,14 @@
   <section class="container">
     <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
       <!-- <h1>{{ test }}</h1> -->
-      <template v-for="product in productsInfo" key="product.id">
-        <ProductCard v-bind="product"></ProductCard>
+      <template v-for="product in productsInfo" :key="product.id">
+        <ProductCard v-bind="product">
+          <!-- <button class="btn btn-primary" @click="redirectProduct(product.id)">
+            buy
+          </button> -->
+          <router-link class="btn btn-primary" 
+          :to="{name: 'Product', params :{productId: product.id}}">buy</router-link>
+        </ProductCard>
       </template>
     </div>
   </section>
@@ -22,8 +28,8 @@ export default {
   },
   mounted () {
     axios
-      .get(`${this.productsInfo}/products?user_id=${this.userId}`)
-      .then( (res) => (this.products = res.data) )
+      // .get(`${this.productsInfo}/products?user_id=${this.userId}`)
+      // .then( (res) => (this.products = res.data) )
   },
   methods: {
     // getProuductsData() {
@@ -31,14 +37,17 @@ export default {
     //     .then(response => response.json())
     //     .then(data => (this.products = data));
     // },
-    parseImgPath: function (path) {
-      return this.$store.state.productsInfo + path;
-    }
+    redirectProduct: function(id){
+      this.$router.push(`/products/${id}`)
+    },
+    // parseImgPath: function (path) {
+    //   return this.$store.state.productsInfo + path;
+    // }
   },
   computed: {
-    // test () {
-    //   return this.$store.state.productsInfo
-    // }
+    test () {
+      return this.$store.state.productsInfo
+    }
   },
   components: { ProductCard }
 }

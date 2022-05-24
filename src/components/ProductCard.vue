@@ -6,9 +6,9 @@
         <p class="card-text">{{ desc }}</p>
         <p class="card-text">${{ price }}</p>
         <p class="card-text">
-          <button class="btn btn-primary" @click="redirectProduct(id)">
+          <!-- <button class="btn btn-primary" @click="redirectProduct(id)">
             buy
-          </button>
+          </button> -->
         </p>
       </div>
       <slot></slot>

@@ -1,19 +1,18 @@
 <template>
   <div class="container">
     <div class="row">
-      <!-- <h1>{{test}}</h1> -->
-      <ProductCard v-bind="productInfo">
+      <ProductCard v-bind="getItem">
         <input type="number" v-model.number="number">
-        <button @click="addCart(product)">加入購物車</button>
+        <button @click="addCart(getItem)">加入購物車</button>
       </ProductCard>
     </div>
     <hr>
     <h3>商品描述</h3>
-    <p>{{ desc }}</p>
+    <p>{{ getItem.desc }}</p>
   </div>
 </template>
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 import ProductCard from '../components/ProductCard.vue'
 
 export default {
@@ -21,16 +20,12 @@ export default {
   data () {
     return{
       number: 0,
-      product: '',
       productsInfo: this.$store.state.productsInfo,
+      test: this.$store.getters.test
     }
   },
   mounted () {
-      axios.get(`${this.productsInfo}/products/${this.$route.params.productId}`)
-           .then(res => this.product = res.data);
-    //   axios.get('https://jsonplaceholder.typicode.com/users')
-    // .then(res => console.log(res.data))
-    // .catch(err => console.log(err))
+
   },
   methods: {
     addCart: function(product){
@@ -44,10 +39,12 @@ export default {
         number: this.number
       })
       alert('已加入購物車')
-    },
+    }
   },
   computed:{
-    
+    getItem (){
+      return this.$store.getters.getItem(parseInt(this.$route.params.productId))
+    },
   }
 }
 </script>

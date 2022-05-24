@@ -76,7 +76,7 @@
       </div>
     </section>
     <section class="picwall-section row row-cols-1 row-cols-md-3 g-3 my-5" id="picwallSection">
-      <div class="col" v-for="product in products" key="product.id">
+      <div class="col" v-for="product in products" :key="product.id">
         <ProductCard v-bind="product"></ProductCard>
       </div>
     </section>
