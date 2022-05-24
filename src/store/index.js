@@ -10,10 +10,10 @@ export default createStore({
     cart: []
   },
   getters:{
-    getItem : state => id => {
+    getProduct : state => id => {
       return state.productsInfo.find(product => product.id === id)
     },
-    currentQuantiy(state){
+    currentQuantity(state){
       return state.cart
       .reduce((productNumber, product) => parseInt(productNumber) + product.number, 0)
     }

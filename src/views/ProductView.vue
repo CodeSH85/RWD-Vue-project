@@ -1,18 +1,17 @@
 <template>
   <div class="container">
     <div class="row">
-      <ProductCard v-bind="getItem">
+      <ProductCard v-bind="getProduct">
         <input type="number" v-model.number="number">
-        <button @click="addCart(getItem)">加入購物車</button>
+        <button @click="addCart(getProduct)">加入購物車</button>
       </ProductCard>
     </div>
     <hr>
     <h3>商品描述</h3>
-    <p>{{ getItem.desc }}</p>
+    <p>{{ getProduct.desc }}</p>
   </div>
 </template>
 <script>
-// import axios from 'axios'
 import ProductCard from '../components/ProductCard.vue'
 
 export default {
@@ -23,9 +22,6 @@ export default {
       productsInfo: this.$store.state.productsInfo,
       test: this.$store.getters.test
     }
-  },
-  mounted () {
-
   },
   methods: {
     addCart: function(product){
@@ -42,9 +38,9 @@ export default {
     }
   },
   computed:{
-    getItem (){
-      return this.$store.getters.getItem(parseInt(this.$route.params.productId))
-    },
+    getProduct (){
+      return this.$store.getters.getProduct(parseInt(this.$route.params.productId))
+    }
   }
 }
 </script>
