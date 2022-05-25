@@ -13,7 +13,7 @@ import store from './store'
 // import "bootstrap/dist/js/bootstrap.bundle.js"
 // import "bootstrap/dist/js/bootstrap.bundle.min.js"
 // import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/scss/bootstrap.scss"
+// import "bootstrap/scss/bootstrap.scss"
 import "bootstrap"
 // import 'bootstrap/js/dist/carousel';
 // import 'bootstrap/js/dist/collapse';

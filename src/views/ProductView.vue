@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <div class="container col-6">
     <div class="row">
       <ProductCard v-bind="getProduct">
         <input type="number" v-model.number="number">
-        <button @click="addCart(getProduct)">加入購物車</button>
+        <button class="btn btn-primary" @click="addCart(getProduct)">Add To Cart</button>
       </ProductCard>
     </div>
     <hr>
-    <h3>商品描述</h3>
+    <h3>Product Info</h3>
     <p>{{ getProduct.desc }}</p>
   </div>
 </template>
@@ -27,14 +27,14 @@ export default {
     addCart: function(product){
       // 判斷存貨
       if(product.quantity - this.number < 0){
-        alert('存貨不足')
+        alert('Out of Stock')
         return;
       }
       this.$store.commit('addCart', {
         product: product,
         number: this.number
       })
-      alert('已加入購物車')
+      alert(`Product Added to Cart`)
     }
   },
   computed:{

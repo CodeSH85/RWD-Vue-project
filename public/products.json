@@ -7,7 +7,8 @@
     "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-brno-chair-sq-1.jpg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":150000
+    "price":150000,
+    "category":"chair"
   },
   {
     "id": 2,
@@ -16,7 +17,8 @@
     "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-barcelona-chair-sq-1.jpg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":300000
+    "price":300000,
+    "category":"chair"
   },
   {
     "id": 3,
@@ -25,7 +27,8 @@
     "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-wassily-chair-sq-1.jpg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":400000
+    "price":400000,
+    "category":"chair"
   },
   {
     "id": 4,
@@ -34,7 +37,8 @@
     "img": "https://static.dezeen.com/uploads/2018/10/nesting-tables-albers-sq-1.jpg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":399999
+    "price":399999,
+    "category":"chair"
   },
   {
     "id": 5,
@@ -43,7 +47,8 @@
     "img": "http://open-archive.bauhaus.de/eMuseumPlus?service=DynamicAsset&sp=SU5mxm4Yx%2FVbg9LVP7MZLDqo6z5lhONBxez%2FYx5EhVSCZjU0bcvvsnPxkoLiFJnF9QzRY98OZwV3L%0ATpwyJeR7NMPvp3RRP61q%2FZaOrpMIarVDj%2BbdodXRACyJGqnlNVpn&sp=Simage%2Fjpeg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":200000
+    "price":200000,
+    "category":"chair"
   },
   {
     "id": 6,
@@ -61,7 +66,8 @@
     "img": "http://open-archive.bauhaus.de/eMuseumPlus?service=DynamicAsset&sp=SU5mxm4Yx%2FVbg9LVP7MZLDqo6z5lhONBxez%2FYx5EhVSCZjU0bcvvsnPxkoLiFJnF9QzRY98OZwV3L%0ATpwyJeR7NMPvp3RRP61q%2FZaOrpMIarVDj%2BbdodXRACyJGqnlNVpn&sp=Simage%2Fjpeg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":150000
+    "price":150000,
+    "category":"chair"
   },
   {
     "id": 8,
@@ -70,7 +76,8 @@
     "img": "http://open-archive.bauhaus.de/eMuseumPlus?service=DynamicAsset&sp=SU5mxm4Yx%2FVbg9LVP7MZLDqo6z5lhONBxez%2FYx5EhVSCZjU0bcvvsnPxkoLiFJnF9QzRY98OZwV3L%0ATpwyJeR7NMPvp3RRP61q%2FZaOrpMIarVDj%2BbdodXRACyJGqnlNVpn&sp=Simage%2Fjpeg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":280000
+    "price":280000,
+    "category":"chair"
   },
   {
     "id": 9,
@@ -79,7 +86,8 @@
     "img": "http://open-archive.bauhaus.de/eMuseumPlus?service=DynamicAsset&sp=SU5mxm4Yx%2FVbg9LVP7MZLDqo6z5lhONBxez%2FYx5EhVSCZjU0bcvvsnPxkoLiFJnF9QzRY98OZwV3L%0ATpwyJeR7NMPvp3RRP61q%2FZaOrpMIarVDj%2BbdodXRACyJGqnlNVpn&sp=Simage%2Fjpeg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":780000
+    "price":780000,
+    "category":"chair"
   },
   {
     "id": 10,
@@ -88,6 +96,7 @@
     "img": "http://open-archive.bauhaus.de/eMuseumPlus?service=DynamicAsset&sp=SU5mxm4Yx%2FVbg9LVP7MZLDqo6z5lhONBxez%2FYx5EhVSCZjU0bcvvsnPxkoLiFJnF9QzRY98OZwV3L%0ATpwyJeR7NMPvp3RRP61q%2FZaOrpMIarVDj%2BbdodXRACyJGqnlNVpn&sp=Simage%2Fjpeg",
     "desc": "just some texts ",
     "quantity":100,
-    "price":650000
+    "price":650000,
+    "category":"chair"
   }
 ]

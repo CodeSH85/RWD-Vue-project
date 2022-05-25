@@ -56,8 +56,8 @@
         </div>
       </div>
     </div>
-    <section class="about-section">
-      <div class="about-title container-fluid col-md-10 d-md-flex my-md-5 py-md-3">
+    <section class="about-section my-md-5 py-md-3">
+      <div class="container-fluid  justify-content-md-evenly  col-md-10 d-md-flex ">
         <div class="row col-md-6">
           <h2 class="h2">About Bauhaus</h2>
           <p>
@@ -75,34 +75,11 @@
         </div>
       </div>
     </section>
-    <section class="picwall-section row row-cols-1 row-cols-md-3 g-3 my-5" id="picwallSection">
-      <div class="col" v-for="product in products" :key="product.id">
+    <section class="picWall-section row row-cols-1 row-cols-md-3 g-3 my-5">
+      <div class="col" v-for="product in productsInfo.slice(0,6)" :key="product.id">
         <ProductCard v-bind="product"></ProductCard>
       </div>
     </section>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 </template>
 <script>
@@ -111,38 +88,10 @@ import ProductCard from "../components/ProductCard.vue"
 export default {
   data () {
     return {
-      products: [
-        {
-          "id": 1,
-          "title": "OK",
-          "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-brno-chair-sq-1.jpg",
-          "desc": "just some texts "
-        },
-        {
-          "id": 2,
-          "title": "Good",
-          "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-barcelona-chair-sq-1.jpg",
-          "desc": "just some texts "
-        },
-        {
-          "id": 3,
-          "title": "nice",
-          "img": "https://static.dezeen.com/uploads/2018/10/bauhaus-wassily-chair-sq-1.jpg",
-          "desc": "just some texts "
-        },
-        {
-          "id": 4,
-          "title": "damn",
-          "img": "https://static.dezeen.com/uploads/2018/10/nesting-tables-albers-sq-1.jpg",
-          "desc": "just some texts "
-        },
-      ],
+      productsInfo: this.$store.state.productsInfo
     }
   },
   computed:{
-    test () {
-      return this.$store.state.product
-    }
   },
   components: {
     ProductCard,

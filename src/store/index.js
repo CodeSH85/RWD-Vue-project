@@ -4,9 +4,7 @@ import productsInfo from "../../public/products.json"
 
 export default createStore({
   state: {
-    //testMessage: 'Hello!',
     productsInfo,
-    userId : 12,
     cart: []
   },
   getters:{

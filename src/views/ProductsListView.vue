@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <h1 class="my-5">Our Products</h1>
     <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
       <template v-for="product in productsInfo" :key="product.id">
         <ProductCard v-bind="product">
@@ -18,7 +19,6 @@ export default {
     return {
       products: [],
       productsInfo: this.$store.state.productsInfo,
-      userId: this.$store.state.userId,
     };
   },
   methods: {

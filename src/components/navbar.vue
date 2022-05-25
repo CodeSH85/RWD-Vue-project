@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+      <div class="container-fluid col-md-10">
         <a class="navbar-brand">
           <router-link class="navbar-brand" to="/">Home</router-link>
         </a>

@@ -7,6 +7,7 @@
 <script>
 import Navbar from "./components/navbar.vue"
 import Footer from "./components/footer.vue"
+import "./assets/scss/main.scss"
   
 export default {
   components: {
@@ -15,3 +16,6 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  @import './assets/scss/main.scss';
+</style>

@@ -1,4 +1,5 @@
 <template>
+  <div class="col">
     <div class="card h-100">
       <img class="card-img-top" :src="img" alt="picture">
       <div class="card-body">
@@ -10,6 +11,7 @@
       </div>
       <slot></slot>
     </div>
+  </div>
 </template>
 <script>
 export default {
